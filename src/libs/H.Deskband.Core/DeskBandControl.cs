@@ -245,7 +245,7 @@ namespace H.SearchDeskBand
         {
             Window.Dispose();
 
-            IpcService.DisposeAsync().AsTask().Wait();
+            IpcService.DisposeAsync().AsTask();
 
             base.Dispose();
         }
