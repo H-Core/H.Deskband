@@ -172,6 +172,11 @@ namespace H.SearchDeskBand
 
             try
             {
+                if (string.IsNullOrWhiteSpace(PipeName))
+                {
+                    return;
+                }
+                
                 IpcService = new IpcService(PipeName);
                 IpcService.Connected += IpcService_OnConnected;
                 IpcService.Disconnected += IpcService_OnDisconnected;
@@ -245,7 +250,7 @@ namespace H.SearchDeskBand
         {
             Window.Dispose();
 
-            IpcService.DisposeAsync().AsTask();
+            IpcService?.DisposeAsync().AsTask();
 
             base.Dispose();
         }
@@ -296,6 +301,11 @@ namespace H.SearchDeskBand
                     await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
                 }
 
+                if (IpcService == null)
+                {
+                    return;
+                }
+                
                 await IpcService.WriteAsync(command, cancellationToken);
             }
             catch (Exception exception)
