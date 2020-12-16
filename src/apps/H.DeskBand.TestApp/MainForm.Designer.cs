@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deskBandControl1 = new DeskBandControl();
+            this.deskBandControl1 = new H.SearchDeskBand.DeskBandControl();
             this.SuspendLayout();
             // 
             // deskBandControl1
             // 
-            this.deskBandControl1.BackColor = System.Drawing.Color.White;
+            this.deskBandControl1.BackColor = System.Drawing.Color.Black;
             this.deskBandControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.deskBandControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.deskBandControl1.Location = new System.Drawing.Point(271, 384);
-            this.deskBandControl1.MaximumSize = new System.Drawing.Size(318, 40);
-            this.deskBandControl1.MinimumSize = new System.Drawing.Size(318, 40);
+            this.deskBandControl1.ForeColor = System.Drawing.Color.White;
+            this.deskBandControl1.Location = new System.Drawing.Point(339, 618);
             this.deskBandControl1.Name = "deskBandControl1";
             this.deskBandControl1.PipeName = "H.DeskBand.TestApp";
-            this.deskBandControl1.Padding = new System.Windows.Forms.Padding(6);
-            this.deskBandControl1.Size = new System.Drawing.Size(318, 40);
+            this.deskBandControl1.Size = new System.Drawing.Size(491, 62);
             this.deskBandControl1.TabIndex = 0;
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.deskBandControl1);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
