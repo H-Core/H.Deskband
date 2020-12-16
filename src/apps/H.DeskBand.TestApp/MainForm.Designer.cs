@@ -40,6 +40,7 @@
             this.deskBandControl1.MaximumSize = new System.Drawing.Size(318, 40);
             this.deskBandControl1.MinimumSize = new System.Drawing.Size(318, 40);
             this.deskBandControl1.Name = "deskBandControl1";
+            this.deskBandControl1.PipeName = "H.DeskBand.TestApp";
             this.deskBandControl1.Padding = new System.Windows.Forms.Padding(6);
             this.deskBandControl1.Size = new System.Drawing.Size(318, 40);
             this.deskBandControl1.TabIndex = 0;

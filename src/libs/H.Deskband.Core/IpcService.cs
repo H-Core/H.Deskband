@@ -12,7 +12,7 @@ namespace H.SearchDeskBand
     {
         #region Properties
 
-        private PipeClient<string> PipeClient { get; } = new ("H.Control");
+        private PipeServer<string> PipeServer { get; }
 
         #endregion
 
@@ -65,12 +65,15 @@ namespace H.SearchDeskBand
         /// <summary>
         /// 
         /// </summary>
-        public IpcService()
+        public IpcService(string pipeName)
         {
-            PipeClient.Connected += (_, _) => OnConnected();
-            PipeClient.Disconnected += (_, _) => OnDisconnected();
-            PipeClient.MessageReceived += (_, args) => OnMessageReceived(args?.Message ?? string.Empty);
-            PipeClient.ExceptionOccurred += (_, args) => OnExceptionOccurred(args.Exception);
+            pipeName = pipeName ?? throw new ArgumentNullException(nameof(pipeName));
+
+            PipeServer = new PipeServer<string>(pipeName);
+            PipeServer.ClientConnected += (_, _) => OnConnected();
+            PipeServer.ClientDisconnected += (_, _) => OnDisconnected();
+            PipeServer.MessageReceived += (_, args) => OnMessageReceived(args.Message ?? string.Empty);
+            PipeServer.ExceptionOccurred += (_, args) => OnExceptionOccurred(args.Exception);
         }
 
         #endregion
@@ -82,9 +85,9 @@ namespace H.SearchDeskBand
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task ConnectAsync(CancellationToken cancellationToken = default)
+        public async Task StartAsync(CancellationToken cancellationToken = default)
         {
-            await PipeClient.ConnectAsync(cancellationToken).ConfigureAwait(false);
+            await PipeServer.StartAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -95,7 +98,7 @@ namespace H.SearchDeskBand
         /// <returns></returns>
         public async Task WriteAsync(string message, CancellationToken cancellationToken = default)
         {
-            await PipeClient.WriteAsync(message, cancellationToken).ConfigureAwait(false);
+            await PipeServer.WriteAsync(message, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -104,7 +107,7 @@ namespace H.SearchDeskBand
         /// <returns></returns>
         public async ValueTask DisposeAsync()
         {
-            await PipeClient.DisposeAsync().ConfigureAwait(false);
+            await PipeServer.DisposeAsync().ConfigureAwait(false);
         }
 
         #endregion

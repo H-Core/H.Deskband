@@ -10,8 +10,8 @@ namespace H.SearchDeskBand
     [ComVisible(true)]
     [DisplayName("Home Center Search")]
     [Guid("AE9E11C0-E4FD-4F96-B9B6-66CC76C2B45D")]
-    [ProgId("H.NET.SearchDeskBand")]
-    public sealed class WebSearchDeskBand : SharpDeskBand
+    [ProgId("H.Deskband")]
+    public sealed class HDeskband : SharpDeskBand
     {
         /// <summary>
         /// 
@@ -19,7 +19,10 @@ namespace H.SearchDeskBand
         /// <returns></returns>
         protected override System.Windows.Forms.UserControl CreateDeskBand()
         {
-            return new DeskBandControl();
+            return new DeskBandControl
+            {
+                PipeName = "H.Deskband",
+            };
         }
 
         /// <summary>

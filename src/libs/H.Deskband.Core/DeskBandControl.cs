@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using H.Core.Utilities;
+using H.Deskband.Core.Extensions;
 using H.Utilities;
 
 namespace H.SearchDeskBand
@@ -57,7 +58,12 @@ namespace H.SearchDeskBand
         /// </summary>
         public ColorTheme ColorTheme { get; } = DarkTheme;
 
-        private IpcService IpcService { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PipeName { get; set; } = string.Empty;
+
+        private IpcService? IpcService { get; set; }
         private DeskBandWindow Window { get; }
         private Dictionary<string, Action<string?>> ActionDictionary { get; } = new ();
 
@@ -72,21 +78,19 @@ namespace H.SearchDeskBand
         {
             InitializeComponent();
 
-            AddAction("start", _ => RecordButton.BackColor = ColorTheme.ActiveColor);
-            AddAction("stop", _ => RecordButton.BackColor = ColorTheme.BackgroundColor);
-            AddAction("preview", message => Label.Text = message);
-            AddAction("clear-preview", _ => Label.Text = @"Enter Command Here");
+            AddAction("start", _ => 
+                RecordButton.InvokeIfRequired(c => c.BackColor = ColorTheme.ActiveColor));
+            AddAction("stop", _ => 
+                RecordButton.InvokeIfRequired(c => c.BackColor = ColorTheme.BackgroundColor));
+            AddAction("preview", message => 
+                Label.InvokeIfRequired(c => c.Text = message));
+            AddAction("clear-preview", _ => 
+                Label.InvokeIfRequired(c => c.Text = @"Enter Command Here"));
 
             Window = new DeskBandWindow();
             Window.ExceptionOccurred += (_, exception) => OnExceptionOccurred(exception);
             Window.CommandSent += Window_OnCommandSent;
             Window.VisibleChanged += (_, _) => Label.Visible = !Window.Visible;
-
-            IpcService = new IpcService();
-            IpcService.Connected += IpcService_OnConnected;
-            IpcService.Disconnected += IpcService_OnDisconnected;
-            IpcService.MessageReceived += (_, text) => IpcService_OnMessageReceived(text);
-            IpcService.ExceptionOccurred += (_, exception) => OnExceptionOccurred(exception);
         }
 
         #endregion
@@ -128,7 +132,7 @@ namespace H.SearchDeskBand
             {
                 var values = message.SplitOnlyFirst(' ');
                 var key = values[0];
-                if (key == null || !ActionDictionary.TryGetValue(key, out var action))
+                if (!ActionDictionary.TryGetValue(key, out var action))
                 {
                     return;
                 }
@@ -166,7 +170,13 @@ namespace H.SearchDeskBand
 
             try
             {
-                await IpcService.ConnectAsync();
+                IpcService = new IpcService(PipeName);
+                IpcService.Connected += IpcService_OnConnected;
+                IpcService.Disconnected += IpcService_OnDisconnected;
+                IpcService.MessageReceived += (_, text) => IpcService_OnMessageReceived(text);
+                IpcService.ExceptionOccurred += (_, exception) => OnExceptionOccurred(exception);
+                
+                await IpcService.StartAsync();
             }
             catch (Exception exception)
             {
