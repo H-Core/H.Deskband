@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeskBandControl));
             this.Label = new System.Windows.Forms.Label();
-            this.MenuButton = new System.Windows.Forms.Button();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.RecordButton = new System.Windows.Forms.Button();
-            this.ShowMainApplicationButton = new System.Windows.Forms.Button();
-            this.SettingsButton = new System.Windows.Forms.Button();
+            this.MenuButton = new FontAwesome.Sharp.IconButton();
+            this.RecordButton = new FontAwesome.Sharp.IconButton();
+            this.ShowMainApplicationButton = new FontAwesome.Sharp.IconButton();
+            this.SettingsButton = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // Label
@@ -59,8 +56,10 @@
             this.MenuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
             this.MenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MenuButton.ImageIndex = 1;
-            this.MenuButton.ImageList = this.ImageList;
+            this.MenuButton.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.MenuButton.IconColor = System.Drawing.Color.Black;
+            this.MenuButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuButton.IconSize = 24;
             this.MenuButton.Location = new System.Drawing.Point(348, 5);
             this.MenuButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MenuButton.Name = "MenuButton";
@@ -68,15 +67,6 @@
             this.MenuButton.TabIndex = 1;
             this.MenuButton.UseVisualStyleBackColor = true;
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
-            // 
-            // ImageList
-            // 
-            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
-            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList.Images.SetKeyName(0, "record.png");
-            this.ImageList.Images.SetKeyName(1, "menu.png");
-            this.ImageList.Images.SetKeyName(2, "ui.png");
-            this.ImageList.Images.SetKeyName(3, "settings.png");
             // 
             // RecordButton
             // 
@@ -86,8 +76,10 @@
             this.RecordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
             this.RecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RecordButton.ImageIndex = 0;
-            this.RecordButton.ImageList = this.ImageList;
+            this.RecordButton.IconChar = FontAwesome.Sharp.IconChar.Microphone;
+            this.RecordButton.IconColor = System.Drawing.Color.Black;
+            this.RecordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RecordButton.IconSize = 24;
             this.RecordButton.Location = new System.Drawing.Point(306, 5);
             this.RecordButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RecordButton.Name = "RecordButton";
@@ -103,8 +95,10 @@
             this.ShowMainApplicationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
             this.ShowMainApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowMainApplicationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowMainApplicationButton.ImageIndex = 2;
-            this.ShowMainApplicationButton.ImageList = this.ImageList;
+            this.ShowMainApplicationButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.ShowMainApplicationButton.IconColor = System.Drawing.Color.Black;
+            this.ShowMainApplicationButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ShowMainApplicationButton.IconSize = 24;
             this.ShowMainApplicationButton.Location = new System.Drawing.Point(432, 5);
             this.ShowMainApplicationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ShowMainApplicationButton.Name = "ShowMainApplicationButton";
@@ -120,8 +114,10 @@
             this.SettingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.SettingsButton.ImageIndex = 3;
-            this.SettingsButton.ImageList = this.ImageList;
+            this.SettingsButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleUp;
+            this.SettingsButton.IconColor = System.Drawing.Color.Black;
+            this.SettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SettingsButton.IconSize = 24;
             this.SettingsButton.Location = new System.Drawing.Point(390, 5);
             this.SettingsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SettingsButton.Name = "SettingsButton";
@@ -157,10 +153,9 @@
         #endregion
 
         private System.Windows.Forms.Label Label;
-        private System.Windows.Forms.Button MenuButton;
-        private System.Windows.Forms.Button RecordButton;
-        private System.Windows.Forms.ImageList ImageList;
-        private System.Windows.Forms.Button ShowMainApplicationButton;
-        private System.Windows.Forms.Button SettingsButton;
+        private FontAwesome.Sharp.IconButton MenuButton;
+        private FontAwesome.Sharp.IconButton RecordButton;
+        private FontAwesome.Sharp.IconButton ShowMainApplicationButton;
+        private FontAwesome.Sharp.IconButton SettingsButton;
     }
 }

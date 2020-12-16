@@ -38,7 +38,7 @@ namespace H.SearchDeskBand
             BackgroundColor = Color.Black,
             ActiveColor = Color.White,
             InactiveColor = Color.Gray,
-            MouseOverColor = Color.White,
+            MouseOverColor = Color.DarkSlateBlue,
         };
 
         /// <summary>
@@ -117,12 +117,14 @@ namespace H.SearchDeskBand
         private void IpcService_OnConnected(object? sender, EventArgs e)
         {
             Label.ForeColor = ColorTheme.ActiveColor;
+            RecordButton.IconColor = ColorTheme.ActiveColor;
             RecordButton.BackColor = ColorTheme.BackgroundColor;
         }
 
         private void IpcService_OnDisconnected(object? sender, EventArgs e)
         {
             Label.ForeColor = ColorTheme.ActiveColor;
+            RecordButton.IconColor = ColorTheme.ActiveColor;
             RecordButton.BackColor = ColorTheme.BackgroundColor;
         }
 
@@ -260,6 +262,11 @@ namespace H.SearchDeskBand
             BackColor = theme.BackgroundColor;
             ForeColor = theme.TextColor;
 
+            RecordButton.IconColor = ColorTheme.TextColor;
+            MenuButton.IconColor = ColorTheme.TextColor;
+            SettingsButton.IconColor = ColorTheme.TextColor;
+            ShowMainApplicationButton.IconColor = ColorTheme.TextColor;
+            
             RecordButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
             MenuButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
             SettingsButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;

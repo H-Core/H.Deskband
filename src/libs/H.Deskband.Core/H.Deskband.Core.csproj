@@ -10,6 +10,7 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp.StrongName" Version="5.15.3.3" />
     <PackageReference Include="H.Core" Version="0.14.9" />
     <PackageReference Include="H.Pipes" Version="1.14.7" />
     <PackageReference Include="H.Utilities.CommandsStorage" Version="0.9.0" />
