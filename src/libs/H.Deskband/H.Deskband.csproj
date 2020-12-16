@@ -62,11 +62,11 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="H.Core" Version="0.14.9" />
-    <PackageReference Include="H.Pipes" Version="1.14.7" />
-    <PackageReference Include="H.Utilities.CommandsStorage" Version="0.9.0" />
-    <PackageReference Include="H.Utilities.Startup" Version="0.9.0" />
     <PackageReference Include="SharpShell" Version="2.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\H.Deskband.Core\H.Deskband.Core.csproj" />
   </ItemGroup>
 
 </Project>
