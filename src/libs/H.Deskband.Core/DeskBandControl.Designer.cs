@@ -40,10 +40,10 @@
             this.Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Label.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Label.ForeColor = System.Drawing.Color.Gray;
-            this.Label.Location = new System.Drawing.Point(9, 9);
-            this.Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label.Location = new System.Drawing.Point(0, 0);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(456, 40);
+            this.Label.Padding = new System.Windows.Forms.Padding(9);
+            this.Label.Size = new System.Drawing.Size(500, 46);
             this.Label.TabIndex = 0;
             this.Label.Text = "Enter Command Here";
             this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -51,6 +51,8 @@
             // 
             // MenuButton
             // 
+            this.MenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.MenuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.MenuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
@@ -60,16 +62,17 @@
             this.MenuButton.IconColor = System.Drawing.Color.Black;
             this.MenuButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuButton.IconSize = 24;
-            this.MenuButton.Location = new System.Drawing.Point(348, 5);
-            this.MenuButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MenuButton.Location = new System.Drawing.Point(366, 0);
             this.MenuButton.Name = "MenuButton";
-            this.MenuButton.Size = new System.Drawing.Size(38, 49);
+            this.MenuButton.Size = new System.Drawing.Size(44, 44);
             this.MenuButton.TabIndex = 1;
             this.MenuButton.UseVisualStyleBackColor = true;
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // RecordButton
             // 
+            this.RecordButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RecordButton.BackColor = System.Drawing.Color.White;
             this.RecordButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.RecordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
@@ -80,16 +83,17 @@
             this.RecordButton.IconColor = System.Drawing.Color.Black;
             this.RecordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RecordButton.IconSize = 24;
-            this.RecordButton.Location = new System.Drawing.Point(306, 5);
-            this.RecordButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RecordButton.Location = new System.Drawing.Point(322, 0);
             this.RecordButton.Name = "RecordButton";
-            this.RecordButton.Size = new System.Drawing.Size(38, 49);
+            this.RecordButton.Size = new System.Drawing.Size(44, 44);
             this.RecordButton.TabIndex = 2;
             this.RecordButton.UseVisualStyleBackColor = false;
             this.RecordButton.Click += new System.EventHandler(this.RecordButton_Click);
             // 
             // ShowMainApplicationButton
             // 
+            this.ShowMainApplicationButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowMainApplicationButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.ShowMainApplicationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.ShowMainApplicationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
@@ -99,16 +103,17 @@
             this.ShowMainApplicationButton.IconColor = System.Drawing.Color.Black;
             this.ShowMainApplicationButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ShowMainApplicationButton.IconSize = 24;
-            this.ShowMainApplicationButton.Location = new System.Drawing.Point(432, 5);
-            this.ShowMainApplicationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ShowMainApplicationButton.Location = new System.Drawing.Point(454, 0);
             this.ShowMainApplicationButton.Name = "ShowMainApplicationButton";
-            this.ShowMainApplicationButton.Size = new System.Drawing.Size(38, 49);
+            this.ShowMainApplicationButton.Size = new System.Drawing.Size(44, 44);
             this.ShowMainApplicationButton.TabIndex = 3;
             this.ShowMainApplicationButton.UseVisualStyleBackColor = true;
             this.ShowMainApplicationButton.Click += new System.EventHandler(this.UiButton_Click);
             // 
             // SettingsButton
             // 
+            this.SettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SettingsButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SettingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.SettingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
@@ -118,10 +123,9 @@
             this.SettingsButton.IconColor = System.Drawing.Color.Black;
             this.SettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingsButton.IconSize = 24;
-            this.SettingsButton.Location = new System.Drawing.Point(390, 5);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SettingsButton.Location = new System.Drawing.Point(410, 0);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(38, 49);
+            this.SettingsButton.Size = new System.Drawing.Size(44, 44);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.UseVisualStyleBackColor = true;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
@@ -138,12 +142,8 @@
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.Label);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(476, 60);
-            this.MinimumSize = new System.Drawing.Size(476, 60);
             this.Name = "DeskBandControl";
-            this.Padding = new System.Windows.Forms.Padding(9);
-            this.Size = new System.Drawing.Size(474, 58);
+            this.Size = new System.Drawing.Size(500, 46);
             this.Load += new System.EventHandler(this.DeskBandControl_Load);
             this.Click += new System.EventHandler(this.OnClick);
             this.ResumeLayout(false);

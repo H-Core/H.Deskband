@@ -33,12 +33,12 @@ namespace H.SearchDeskBand
         {
             return new()
             {
-                HasVariableHeight = false,
+                HasVariableHeight = true,
                 IsSunken = false,
                 ShowTitle = true,
                 Title = "Home Center Search",
                 UseBackgroundColour = false,
-                AlwaysShowGripper = true
+                AlwaysShowGripper = true,
             };
         }
     }
