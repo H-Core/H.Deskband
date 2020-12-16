@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{73712481-1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H.DeskBand.TestApp", "src\apps\H.DeskBand.TestApp\H.DeskBand.TestApp.csproj", "{12219B22-5AE9-41E4-9A54-02B8D966D9F2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H.Deskband.Core", "src\libs\H.Deskband.Core\H.Deskband.Core.csproj", "{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{12219B22-5AE9-41E4-9A54-02B8D966D9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12219B22-5AE9-41E4-9A54-02B8D966D9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12219B22-5AE9-41E4-9A54-02B8D966D9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{8C39C5CD-A8D1-4528-9FCE-0190BD515466} = {6E5BF389-3D3F-4D74-9DD0-3B199CB529C5}
 		{F2548AE2-D736-4C21-942F-55C4F592EFF2} = {9CAA231D-7BE1-46C9-ACD6-EB2E569CEBEA}
 		{12219B22-5AE9-41E4-9A54-02B8D966D9F2} = {73712481-1F1B-4BD4-A175-20A3291FCF77}
+		{2ACA2FD1-8D3C-43AF-BF4F-211DEC7A8526} = {6E5BF389-3D3F-4D74-9DD0-3B199CB529C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1493AEE4-9211-46E9-BFE6-8F629EAC5693}

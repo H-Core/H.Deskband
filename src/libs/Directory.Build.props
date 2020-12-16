@@ -3,6 +3,8 @@
   <Import Project="..\Directory.Build.props" />
 
   <PropertyGroup Label="Nuget">
+    <Version>0.9.0</Version>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>havendv</Authors>
@@ -45,6 +47,10 @@
       </_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
+
+  <PropertyGroup Label="Analyzers">
+    <NoWarn>$(NoWarn);CS8600;CS8602</NoWarn>
+  </PropertyGroup>
 
   <!--<ItemGroup Label="Analyzers">
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1">
