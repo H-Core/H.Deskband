@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop" InitialTargets="CheckAdmin">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop" InitialTargets="CheckAdmin">
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -8,12 +8,6 @@
   <PropertyGroup Label="COM">
     <RegisterForComInterop>false</RegisterForComInterop>
     <ComDir>com\</ComDir>
-  </PropertyGroup>
-
-  <PropertyGroup Label="NuGet">
-    <Version>0.9.0</Version>
-    <Description>Description</Description>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
   </PropertyGroup>
 
   <Target Name="CheckAdmin">
@@ -64,10 +58,13 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="H.Core" Version="0.14.9" />
-    <PackageReference Include="H.Pipes" Version="1.14.7" />
-    <PackageReference Include="H.Utilities.CommandsStorage" Version="0.9.0" />
-    <PackageReference Include="H.Utilities.Startup" Version="0.9.0" />
+    <ProjectReference Include="..\..\Utilities\CommandsStorage\CommandsStorage.csproj" />
+    <ProjectReference Include="..\..\Utilities\Startup\Startup.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H.Core" Version="0.9.1" />
+    <PackageReference Include="H.Pipes" Version="1.14.4" />
     <PackageReference Include="SharpShell" Version="2.7.2" />
   </ItemGroup>
 
