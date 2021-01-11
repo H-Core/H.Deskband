@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -134,13 +135,13 @@ namespace H.SearchDeskBand
             try
             {
                 var values = message.SplitOnlyFirst(' ');
-                var key = values[0];
+                var key = values.ElementAt(0);
                 if (!ActionDictionary.TryGetValue(key, out var action))
                 {
                     return;
                 }
 
-                action?.Invoke(values[1]);
+                action?.Invoke(values.ElementAtOrDefault(1) ?? string.Empty);
             }
             catch (Exception exception)
             {
