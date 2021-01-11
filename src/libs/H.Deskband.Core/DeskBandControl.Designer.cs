@@ -30,7 +30,7 @@
         {
             this.Label = new System.Windows.Forms.Label();
             this.MenuButton = new FontAwesome.Sharp.IconButton();
-            this.RecordButton = new FontAwesome.Sharp.IconButton();
+            this.RecognitionButton = new FontAwesome.Sharp.IconButton();
             this.ShowMainApplicationButton = new FontAwesome.Sharp.IconButton();
             this.SettingsButton = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
@@ -69,26 +69,26 @@
             this.MenuButton.UseVisualStyleBackColor = true;
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
-            // RecordButton
+            // RecognitionButton
             // 
-            this.RecordButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.RecognitionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecordButton.BackColor = System.Drawing.Color.White;
-            this.RecordButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.RecordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.RecordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
-            this.RecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RecordButton.IconChar = FontAwesome.Sharp.IconChar.Microphone;
-            this.RecordButton.IconColor = System.Drawing.Color.Black;
-            this.RecordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RecordButton.IconSize = 24;
-            this.RecordButton.Location = new System.Drawing.Point(322, 0);
-            this.RecordButton.Name = "RecordButton";
-            this.RecordButton.Size = new System.Drawing.Size(44, 44);
-            this.RecordButton.TabIndex = 2;
-            this.RecordButton.UseVisualStyleBackColor = false;
-            this.RecordButton.Click += new System.EventHandler(this.RecordButton_Click);
+            this.RecognitionButton.BackColor = System.Drawing.Color.White;
+            this.RecognitionButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RecognitionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.RecognitionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue;
+            this.RecognitionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecognitionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RecognitionButton.IconChar = FontAwesome.Sharp.IconChar.Microphone;
+            this.RecognitionButton.IconColor = System.Drawing.Color.Black;
+            this.RecognitionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RecognitionButton.IconSize = 24;
+            this.RecognitionButton.Location = new System.Drawing.Point(322, 0);
+            this.RecognitionButton.Name = "RecognitionButton";
+            this.RecognitionButton.Size = new System.Drawing.Size(44, 44);
+            this.RecognitionButton.TabIndex = 2;
+            this.RecognitionButton.UseVisualStyleBackColor = false;
+            this.RecognitionButton.Click += new System.EventHandler(this.RecognitionButton_Click);
             // 
             // ShowMainApplicationButton
             // 
@@ -138,7 +138,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.ShowMainApplicationButton);
-            this.Controls.Add(this.RecordButton);
+            this.Controls.Add(this.RecognitionButton);
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.Label);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -154,7 +154,7 @@
 
         private System.Windows.Forms.Label Label;
         private FontAwesome.Sharp.IconButton MenuButton;
-        private FontAwesome.Sharp.IconButton RecordButton;
+        private FontAwesome.Sharp.IconButton RecognitionButton;
         private FontAwesome.Sharp.IconButton ShowMainApplicationButton;
         private FontAwesome.Sharp.IconButton SettingsButton;
     }

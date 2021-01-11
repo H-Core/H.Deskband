@@ -81,9 +81,9 @@ namespace H.Deskband.Core
             InitializeComponent();
 
             AddAction("start", _ => 
-                RecordButton.InvokeIfRequired(c => c.BackColor = ColorTheme.ActiveColor));
+                RecognitionButton.InvokeIfRequired(c => c.BackColor = ColorTheme.ActiveColor));
             AddAction("stop", _ => 
-                RecordButton.InvokeIfRequired(c => c.BackColor = ColorTheme.BackgroundColor));
+                RecognitionButton.InvokeIfRequired(c => c.BackColor = ColorTheme.BackgroundColor));
             AddAction("preview", message => 
                 Label.InvokeIfRequired(c => c.Text = message));
             AddAction("clear-preview", _ => 
@@ -119,15 +119,15 @@ namespace H.Deskband.Core
         private void IpcService_OnConnected(object? sender, EventArgs e)
         {
             Label.ForeColor = ColorTheme.ActiveColor;
-            RecordButton.IconColor = ColorTheme.ActiveColor;
-            RecordButton.BackColor = ColorTheme.BackgroundColor;
+            RecognitionButton.IconColor = ColorTheme.ActiveColor;
+            RecognitionButton.BackColor = ColorTheme.BackgroundColor;
         }
 
         private void IpcService_OnDisconnected(object? sender, EventArgs e)
         {
             Label.ForeColor = ColorTheme.ActiveColor;
-            RecordButton.IconColor = ColorTheme.ActiveColor;
-            RecordButton.BackColor = ColorTheme.BackgroundColor;
+            RecognitionButton.IconColor = ColorTheme.ActiveColor;
+            RecognitionButton.BackColor = ColorTheme.BackgroundColor;
         }
 
         private void IpcService_OnMessageReceived(string message)
@@ -193,11 +193,11 @@ namespace H.Deskband.Core
             }
         }
 
-        private async void RecordButton_Click(object sender, EventArgs e)
+        private async void RecognitionButton_Click(object sender, EventArgs e)
         {
             try
             {
-                await RunAsync("start-record");
+                await RunAsync("start-recognition");
             }
             catch (Exception exception)
             {
@@ -265,21 +265,21 @@ namespace H.Deskband.Core
         {
             Window.ApplyTheme(ColorTheme);
 
-            RecordButton.BackColor = theme.BackgroundColor;
+            RecognitionButton.BackColor = theme.BackgroundColor;
             BackColor = theme.BackgroundColor;
             ForeColor = theme.TextColor;
 
-            RecordButton.IconColor = ColorTheme.TextColor;
+            RecognitionButton.IconColor = ColorTheme.TextColor;
             MenuButton.IconColor = ColorTheme.TextColor;
             SettingsButton.IconColor = ColorTheme.TextColor;
             ShowMainApplicationButton.IconColor = ColorTheme.TextColor;
             
-            RecordButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
+            RecognitionButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
             MenuButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
             SettingsButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
             ShowMainApplicationButton.FlatAppearance.MouseDownBackColor = theme.ActiveColor;
 
-            RecordButton.FlatAppearance.MouseOverBackColor = theme.MouseOverColor;
+            RecognitionButton.FlatAppearance.MouseOverBackColor = theme.MouseOverColor;
             MenuButton.FlatAppearance.MouseOverBackColor = theme.MouseOverColor;
             SettingsButton.FlatAppearance.MouseOverBackColor = theme.MouseOverColor;
             ShowMainApplicationButton.FlatAppearance.MouseOverBackColor = theme.MouseOverColor;
