@@ -19,10 +19,31 @@ namespace H.SearchDeskBand
         /// <returns></returns>
         protected override System.Windows.Forms.UserControl CreateDeskBand()
         {
-            return new DeskBandControl
+            var control = new DeskBandControl
             {
                 PipeName = "H.Deskband",
             };
+            //control.Running += async (_, _) =>
+            //{
+            //    var applicationName = "HomeCenter.NET";
+            //    if (Process.GetProcessesByName(applicationName).Any())
+            //    {
+            //        return;
+            //    }
+
+            //    var path = Startup.GetFilePath($"{applicationName}.exe");
+            //    if (path == null || string.IsNullOrWhiteSpace(path) || !File.Exists(path))
+            //    {
+            //        MessageBox.Show(@"H.Control application is not running and it was not found in startup.", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        return;
+            //    }
+
+            //    Process.Start(path);
+
+            //    await Task.Delay(TimeSpan.FromSeconds(1));
+            //};
+
+            return control;
         }
 
         /// <summary>

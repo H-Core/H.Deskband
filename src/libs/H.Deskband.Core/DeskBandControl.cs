@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using H.Core.Utilities;
 using H.Deskband.Core.Extensions;
-using H.Utilities;
 
 namespace H.SearchDeskBand
 {
@@ -18,15 +14,6 @@ namespace H.SearchDeskBand
     /// </summary>
     public sealed partial class DeskBandControl : UserControl, IDisposable
     {
-        #region Constants
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public const string ApplicationName = "HomeCenter.NET";
-
-        #endregion
-
         #region Properties
         
         /// <summary>
@@ -66,6 +53,20 @@ namespace H.SearchDeskBand
         private IpcService? IpcService { get; set; }
         private DeskBandWindow Window { get; }
         private Dictionary<string, Action<string?>> ActionDictionary { get; } = new ();
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public event EventHandler<string>? Running;
+
+        private void OnRunning(string command)
+        {
+            Running?.Invoke(this, command);
+        }
 
         #endregion
 
@@ -287,19 +288,7 @@ namespace H.SearchDeskBand
         {
             try
             {
-                if (!Process.GetProcessesByName(ApplicationName).Any())
-                {
-                    var path = Startup.GetFilePath($"{ApplicationName}.exe");
-                    if (path == null || string.IsNullOrWhiteSpace(path) || !File.Exists(path))
-                    {
-                        MessageBox.Show(@"H.Control application is not running and it was not found in startup.", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    Process.Start(path);
-
-                    await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
-                }
+                OnRunning(command);
 
                 if (IpcService == null)
                 {
