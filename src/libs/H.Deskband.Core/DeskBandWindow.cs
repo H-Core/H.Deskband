@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using H.Utilities;
 
-namespace H.SearchDeskBand
+namespace H.Deskband.Core
 {
     /// <summary>
     /// 

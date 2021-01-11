@@ -1,4 +1,6 @@
-﻿namespace H.SearchDeskBand.TestApp
+﻿using H.Deskband.Core;
+
+namespace H.DeskBand.TestApp
 {
     partial class MainForm
     {
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deskBandControl1 = new H.SearchDeskBand.DeskBandControl();
+            this.deskBandControl1 = new DeskBandControl();
             this.SuspendLayout();
             // 
             // deskBandControl1

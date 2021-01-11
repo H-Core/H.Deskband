@@ -1,14 +1,15 @@
 ﻿using System.Runtime.InteropServices;
+using H.Deskband.Core;
 using SharpShell.Attributes;
 using SharpShell.SharpDeskBand;
 
-namespace H.SearchDeskBand
+namespace H.Deskband
 {
     /// <summary>
     /// 
     /// </summary>
     [ComVisible(true)]
-    [DisplayName("Home Center Search")]
+    [DisplayName("H.Deskband")]
     [Guid("AE9E11C0-E4FD-4F96-B9B6-66CC76C2B45D")]
     [ProgId("H.Deskband")]
     public sealed class HDeskband : SharpDeskBand
@@ -57,7 +58,7 @@ namespace H.SearchDeskBand
                 HasVariableHeight = true,
                 IsSunken = false,
                 ShowTitle = true,
-                Title = "Home Center Search",
+                Title = "H.Deskband",
                 UseBackgroundColour = false,
                 AlwaysShowGripper = true,
             };

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using H.Core.Utilities;
 using H.Deskband.Core.Extensions;
 
-namespace H.SearchDeskBand
+namespace H.Deskband.Core
 {
     /// <summary>
     /// 

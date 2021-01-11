@@ -1,4 +1,4 @@
-﻿namespace H.SearchDeskBand
+﻿namespace H.Deskband.Core
 {
     partial class DeskBandControl
     {

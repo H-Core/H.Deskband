@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Windows.Forms;
-using H.SearchDeskBand.TestApp;
+using H.DeskBand.TestApp;
 
 var thread = new Thread(() =>
 {

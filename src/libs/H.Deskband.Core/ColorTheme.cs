@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace H.SearchDeskBand
+namespace H.Deskband.Core
 {
     /// <summary>
     /// 

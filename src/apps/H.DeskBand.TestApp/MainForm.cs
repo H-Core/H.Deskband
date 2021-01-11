@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace H.SearchDeskBand.TestApp
+namespace H.DeskBand.TestApp
 {
     public partial class MainForm : Form
     {
