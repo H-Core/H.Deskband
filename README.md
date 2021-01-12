@@ -5,23 +5,13 @@
 [![Requirements](https://img.shields.io/badge/Requirements-.NET%20Standard%202.0-blue.svg)](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md)
 [![Build Status](https://github.com/HavenDV/H.Deskband/workflows/.NET/badge.svg?branch=master)](https://github.com/HavenDV/H.Deskband/actions?query=workflow%3A%22.NET%22)
 
-Description
-
-### Nuget
-
-[![NuGet](https://img.shields.io/nuget/dt/H.Deskband.svg?style=flat-square&label=H.Deskband)](https://www.nuget.org/packages/H.Deskband/)
-
-```
-Install-Package H.Deskband
-```
+Allows you to send commands to the main application. It also starts recognition when the button is pressed.
 
 ### Usage
 
-```cs
-// code
-```
-
-### Used documentation
+1. Run VS as administrator
+2. Start building the H.Deskband project. This will automatically register the library with the system.
+3. Activate Deskband
 
 ### Contacts
 * [mail](mailto:havendv@gmail.com)
