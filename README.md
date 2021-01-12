@@ -6,12 +6,14 @@
 [![Build Status](https://github.com/HavenDV/H.Deskband/workflows/.NET/badge.svg?branch=master)](https://github.com/HavenDV/H.Deskband/actions?query=workflow%3A%22.NET%22)
 
 Allows you to send commands to the main application. It also starts recognition when the button is pressed.
+![Activation](docs/deskband.png)
 
 ### Usage
 
 1. Run VS as administrator
 2. Start building the H.Deskband project. This will automatically register the library with the system.
-3. Activate Deskband
+3. Activate Deskband  
+![Activation](docs/activation.png)
 
 ### Contacts
 * [mail](mailto:havendv@gmail.com)
