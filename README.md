@@ -11,9 +11,12 @@ Allows you to send commands to the main application. It also starts recognition 
 ### Usage
 
 1. Run VS as administrator
-2. Start building the H.Deskband project. This will automatically register the library with the system.
+2. Start building the H.Deskband project. This will automatically register the library in the system.
 3. Activate Deskband  
 ![Activation](docs/activation.png)
+
+### Debug
+You can debug this using the H.DeskBand.TestApp project. This is a WinForms single-window application that contains this control.
 
 ### Contacts
 * [mail](mailto:havendv@gmail.com)
