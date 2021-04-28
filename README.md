@@ -12,7 +12,7 @@ Allows you to send commands to the main application. It also starts recognition 
 
 1. Run VS as administrator
 2. Start building the H.Deskband project. This will automatically register the library in the system.
-3. Activate Deskband  
+3. Activate Deskband(note: It may appear on the list from the second or third try, just open this menu a few times)
 ![Activation](docs/activation.png)
 
 ### Debug
